@@ -15,6 +15,7 @@
 		0D308DEF262ABA8100FD6472 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D308DED262ABA8100FD6472 /* LaunchScreen.storyboard */; };
 		0D308DFA262ABA8100FD6472 /* changeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D308DF9262ABA8100FD6472 /* changeTests.swift */; };
 		0D308E05262ABA8100FD6472 /* changeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D308E04262ABA8100FD6472 /* changeUITests.swift */; };
+		0D308E13262ACA1300FD6472 /* arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D308E12262ACA1300FD6472 /* arrays.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0D308E00262ABA8100FD6472 /* changeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = changeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D308E04262ABA8100FD6472 /* changeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changeUITests.swift; sourceTree = "<group>"; };
 		0D308E06262ABA8100FD6472 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D308E12262ACA1300FD6472 /* arrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arrays.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				0D308DE4262ABA8100FD6472 /* SceneDelegate.swift */,
 				0D308DE6262ABA8100FD6472 /* ViewController.swift */,
 				0D308DE8262ABA8100FD6472 /* Main.storyboard */,
+				0D308E12262ACA1300FD6472 /* arrays.swift */,
 				0D308DEB262ABA8100FD6472 /* Assets.xcassets */,
 				0D308DED262ABA8100FD6472 /* LaunchScreen.storyboard */,
 				0D308DF0262ABA8100FD6472 /* Info.plist */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D308DE7262ABA8100FD6472 /* ViewController.swift in Sources */,
+				0D308E13262ACA1300FD6472 /* arrays.swift in Sources */,
 				0D308DE3262ABA8100FD6472 /* AppDelegate.swift in Sources */,
 				0D308DE5262ABA8100FD6472 /* SceneDelegate.swift in Sources */,
 			);

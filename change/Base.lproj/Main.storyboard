@@ -1,24 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="change" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0n4-kU-DPI">
+                                <rect key="frame" x="145" y="400" width="122" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="changepage:" destination="BYZ-38-t0r" eventType="valueChanged" id="3gU-4i-6lZ"/>
+                                </connections>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRA-Zk-Jg1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CPD-uT-VhL">
+                                        <rect key="frame" x="0.0" y="0.0" width="1242" height="125"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="city" translatesAutoresizingMaskIntoConstraints="NO" id="x0n-FG-Rbf" userLabel="cafe1">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="jLf-De-nQE" userLabel="cafe2">
+                                                <rect key="frame" x="414" y="0.0" width="414" height="125"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="night" translatesAutoresizingMaskIntoConstraints="NO" id="FbJ-F1-Pr7" userLabel="cafe3">
+                                                <rect key="frame" x="828" y="0.0" width="414" height="125"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="x0n-FG-Rbf" firstAttribute="width" secondItem="53B-o2-uAR" secondAttribute="width" id="5xg-nL-hzw"/>
+                                    <constraint firstItem="CPD-uT-VhL" firstAttribute="top" secondItem="kyI-LU-klV" secondAttribute="top" id="H4v-O3-Snn"/>
+                                    <constraint firstItem="CPD-uT-VhL" firstAttribute="trailing" secondItem="kyI-LU-klV" secondAttribute="trailing" id="SWg-lT-rlU"/>
+                                    <constraint firstItem="CPD-uT-VhL" firstAttribute="bottom" secondItem="kyI-LU-klV" secondAttribute="bottom" id="TUM-Qx-Xev"/>
+                                    <constraint firstItem="CPD-uT-VhL" firstAttribute="leading" secondItem="kyI-LU-klV" secondAttribute="leading" id="sWe-rm-JZ6"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="kyI-LU-klV"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="53B-o2-uAR"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="QUu-9E-W4H"/>
+                                </connections>
+                            </scrollView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bun 2" translatesAutoresizingMaskIntoConstraints="NO" id="NXJ-1y-uLe">
+                                <rect key="frame" x="23" y="85" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Killer" translatesAutoresizingMaskIntoConstraints="NO" id="CyV-OU-Eqj">
+                                <rect key="frame" x="9" y="190" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fear" translatesAutoresizingMaskIntoConstraints="NO" id="hgf-xA-Qrh">
+                                <rect key="frame" x="114" y="111" width="74" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BS8-a2-qXV">
+                                <rect key="frame" x="20" y="494" width="101" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="hair" image="Bun 2"/>
+                                <connections>
+                                    <action selector="changehair:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xG6-fX-QBp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wR-Pi-2RI">
+                                <rect key="frame" x="142" y="481" width="101" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="hair" image="Cornrows"/>
+                                <connections>
+                                    <action selector="changehair:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qgm-aT-aBq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sv1-Pq-TcV">
+                                <rect key="frame" x="269" y="493" width="101" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="hair" image="Short 4"/>
+                                <connections>
+                                    <action selector="changehair:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gvW-S5-EkQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJc-YV-VzT">
+                                <rect key="frame" x="9" y="604" width="122" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Killer"/>
+                                <connections>
+                                    <action selector="changebody:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Odt-T6-r9d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRI-kx-H1V">
+                                <rect key="frame" x="131" y="603" width="122" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Macbook"/>
+                                <connections>
+                                    <action selector="changebody:" destination="BYZ-38-t0r" eventType="touchUpInside" id="05P-qf-0m7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdU-BM-j4s">
+                                <rect key="frame" x="261" y="602" width="122" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Tee Arms Crossed"/>
+                                <connections>
+                                    <action selector="changebody:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uL9-bj-qGa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmV-RT-jgg">
+                                <rect key="frame" x="75" y="776" width="250" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="30"/>
+                                <state key="normal" title="Hidden Figure">
+                                    <color key="titleColor" systemColor="systemPurpleColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="random:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T5c-K9-HZe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="JRA-Zk-Jg1" secondAttribute="leading" id="AUK-XR-VLr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="JRA-Zk-Jg1" secondAttribute="top" id="Sau-HT-83D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JRA-Zk-Jg1" secondAttribute="trailing" id="TPo-Ft-ljC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JRA-Zk-Jg1" secondAttribute="bottom" id="ZWx-oF-bbW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bodyview" destination="CyV-OU-Eqj" id="AqZ-bY-7do"/>
+                        <outlet property="emotionview" destination="hgf-xA-Qrh" id="PwI-k7-qQT"/>
+                        <outlet property="hairview" destination="NXJ-1y-uLe" id="UJ7-9Y-PLS"/>
+                        <outlet property="pagecontrol" destination="0n4-kU-DPI" id="Pi4-Bx-hZc"/>
+                        <outlet property="scrollview" destination="JRA-Zk-Jg1" id="cML-CW-pO4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="76.339285714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bun 2" width="473" height="567"/>
+        <image name="Cornrows" width="473" height="567"/>
+        <image name="Fear" width="289" height="293"/>
+        <image name="Killer" width="818" height="733"/>
+        <image name="Macbook" width="818" height="733"/>
+        <image name="Short 4" width="473" height="567"/>
+        <image name="Tee Arms Crossed" width="818" height="733"/>
+        <image name="city" width="393" height="125"/>
+        <image name="day" width="388" height="119"/>
+        <image name="night" width="385" height="98"/>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
